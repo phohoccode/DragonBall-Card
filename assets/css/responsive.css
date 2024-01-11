@@ -1,0 +1,23 @@
+@media  (max-width: 739px) {
+    body {
+        align-items: start;
+    }
+    
+    .card {
+        max-width: 375px;
+    }
+
+    button {
+        margin-top: 24px;
+        top: 110%;
+    }
+    .left {
+        left: 0;
+    }
+    .right {
+        right: 0;
+    }
+    .more {
+        opacity: 1;
+    }
+}
