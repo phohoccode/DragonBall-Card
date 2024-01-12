@@ -68,14 +68,17 @@ body {
 .figure,
 .figure-member {
     display: flex;
+    align-items: center;
     margin-top: 12px;
     gap: 20px;
     border: 1px solid transparent;
     transition: all .2s ease;
 }
+
 .figure-member:hover {
     border-radius: 6px;
     border: 1px solid orangered;
+    cursor: pointer;
 }
 
 .figure .avatar,
@@ -270,10 +273,6 @@ button:active {
 
 .rotate:hover {
     color:#e53824;
-}
-
-.rotate:active .card {
-    transform: rotateY(90deg);
 }
 
 .animated-bg {

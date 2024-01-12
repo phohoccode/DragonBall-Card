@@ -1,27 +1,27 @@
-const dragonBallElement = document.querySelector('#dragonball')
-const cartsElement = document.querySelector('.cards')
 const buttonLeftElement = document.querySelector('.left')
 const buttonRightElement = document.querySelector('.right')
 const cardElements = document.querySelectorAll('.card')
-const cardOnElement = document.querySelectorAll('.card-on')
-const cardUnderElement = document.querySelectorAll('.card-under')
-const backgroundElemnt = document.querySelectorAll('.background')
-const NameElement = document.querySelectorAll('.name')
-const DesElement = document.querySelectorAll('.des')
-const avatarElement = document.querySelectorAll('.avatar')
-const originElement = document.querySelectorAll('.origin')
-const dateElement = document.querySelectorAll('.date')
+const cardOnElements = document.querySelectorAll('.card-on')
+const cardUnderElements = document.querySelectorAll('.card-under')
+const backgroundElemnts = document.querySelectorAll('.background')
+const NameElements = document.querySelectorAll('.name')
+const desElements = document.querySelectorAll('.des')
+const avatarElements = document.querySelectorAll('.avatar')
+const originElements = document.querySelectorAll('.origin')
+const dateElements = document.querySelectorAll('.date')
 const rotateElements = document.querySelectorAll('.rotate')
-const iconRotateElement = document.querySelectorAll('.icon-rotate')
-const rowElement = document.querySelectorAll('.row')
-const iconElement = document.querySelectorAll('.icon')
+const iconRotateElements = document.querySelectorAll('.icon-rotate')
+const rowElements = document.querySelectorAll('.row')
+const headerElements = document.querySelectorAll('header')
+const iconElements = document.querySelectorAll('.icon')
+
 
 
 let indexDefault = 0
 const lengthCart = cardElements.length
 const indexArr = [0]
 
-const carts = [
+const cards = [
     {
         background: 'assets/img/background/goku-bg.jpg',
         Name: 'Son Goku',
@@ -31,18 +31,21 @@ const carts = [
         date: '18-4-737',
         members: [
             {
+                id_member: 5,
                 avatarMember: 'assets/img/avatar/chichi.png',
                 NameMember: 'ChiChi',
                 originMember: 'Trái Đất',
-                dateMember: '15-8-757'
+                dateMember: '?-?-?'
             },
             {
+                id_member: 3,
                 avatarMember: 'assets/img/avatar/gohan.jpg',
                 NameMember: 'Gohan',
                 originMember: 'Half-Saiyan',
                 dateMember: '18-5-757'
             },
             {
+                id_member: 6,
                 avatarMember: 'assets/img/avatar/gotent.jpg',
                 NameMember: 'Gotent',
                 originMember: 'Saiyan',
@@ -86,30 +89,33 @@ const carts = [
         origin: 'Namekian',
         date: '?-?-?',
         members: [
-
+            
         ]
     },
     {
         background: 'assets/img/background/gohan-bg.jpg',
-        Name: 'Gohan',
+        Name: 'Son Gohan',
         des: 'Gohan được giới thiệu lần đầu trong Dragon Ball Z khi còn là một đứa trẻ. Anh là một phần Saiyan và một phần người Trái Đất, nên có sức mạnh tiềm ẩn lớn. Gohan phát triển từ một đứa trẻ nhút nhát thành một chiến binh mạnh mẽ, đặc biệt là khi anh chuyển sang các dạng Super Saiyan.',
         avatar: 'assets/img/avatar/gohan.jpg',
-        origin: 'Half-Saiyan',
+        origin: 'Saiyan Hybrid',
         date: '18-5-757',
         members: [
             {
+                id_member: 0,
                 avatarMember: 'assets/img/avatar/goku.jpg',
                 NameMember: 'Goku',
                 originMember: 'Saiyan',
                 dateMember: '18-4-737'
             },
             {
+                id_member: 5,
                 avatarMember: 'assets/img/avatar/chichi.png',
                 NameMember: 'ChiChi',
                 originMember: 'Trái Đất',
-                dateMember: '15-8-757'
+                dateMember: '?-?-?'
             },
             {
+                id_member: 6,
                 avatarMember: 'assets/img/avatar/gotent.jpg',
                 NameMember: 'Gotent',
                 originMember: 'Saiyan Hybrid',
@@ -122,7 +128,7 @@ const carts = [
         Name: 'Krillin',
         des: 'Krillin là bạn thân từ thuở nhỏ của Goku và là một trong những chiến binh mạnh mẽ nhất của Trái Đất. Anh thường tham gia cùng Goku trong nhiều cuộc phiêu lưu và chiến đấu. Mặc dù không có sức mạnh Saiyan nhưng Krillin được biết đến với kỹ thuật chiến đấu tinh tế và sự gan dạ trong các tình huống khó khăn.',
         avatar: 'assets/img/avatar/krilin.jpg',
-        origin: 'Người Trái Đất',
+        origin: 'Trái Đất',
         date: '15-8-757',
         members: [
             {
@@ -138,9 +144,70 @@ const carts = [
                 dateMember: '?-?-?'
             }
         ]
+    },
+    {
+        background: 'assets/img/background/chichi-bg.jpg',
+        Name: 'Chichi',
+        des: 'Chi-Chi là một nhân vật phụ quan trọng trong loạt truyện Dragon Ball. Cô gặp Goku khi còn rất nhỏ và sau đó kết hôn với anh sau sự kiện giải đấu môn võ. Chi-Chi thường được mô tả là một người phụ nữ mạnh mẽ, có tình yêu lớn với gia đình và đặt nặng vào việc giáo dục con cái.',
+        avatar: 'assets/img/avatar/chichi.png',
+        origin: 'Trái Đất',
+        date: '?-?-?',
+        members: [
+            {
+                id_member: 0,
+                avatarMember: 'assets/img/avatar/goku.jpg',
+                NameMember: 'Goku',
+                originMember: 'Saiyan',
+                dateMember: '18-4-737'
+            },
+            {
+                id_member: 3,
+                avatarMember: 'assets/img/avatar/gohan.jpg',
+                NameMember: 'Gohan',
+                originMember: 'Saiyan Hybrid',
+                dateMember: '18-5-757'
+            },
+            {
+                id_member: 6,
+                avatarMember: 'assets/img/avatar/gotent.jpg',
+                NameMember: 'Gotent',
+                originMember: 'Saiyan Hybrid',
+                dateMember: '?-?-767'
+            }
+        ]
+    },
+    {
+        background: 'assets/img/background/goten-bg.jpg',
+        Name: 'Son Goten',
+        des: 'Goten xuất hiện trong loạt truyện Dragon Ball Z và Dragon Ball Super.Anh ta thừa hưởng sức mạnh Saiyan và thường xuyên tham gia vào các cuộc phiêu lưu và trận đấu để bảo vệ Trái đất.Goten thường được thấy với chiếc đầu mái tóc đen và đôi mắt đen tinh nghịch, giống với Goku khi còn nhỏ.',
+        avatar: 'assets/img/avatar/gotent.jpg',
+        origin: 'Saiyan Hybrid',
+        date: '?-?-767',
+        members: [
+            {
+                id_member: 0,
+                avatarMember: 'assets/img/avatar/goku.jpg',
+                NameMember: 'Goku',
+                originMember: 'Saiyan',
+                dateMember: '18-4-737'
+            },
+            {
+                id_member: 5,
+                avatarMember: 'assets/img/avatar/chichi.png',
+                NameMember: 'ChiChi',
+                originMember: 'Trái Đất',
+                dateMember: '?-?-?'
+            },
+            {
+                id_member: 3,
+                avatarMember: 'assets/img/avatar/gohan.jpg',
+                NameMember: 'Gohan',
+                originMember: 'Saiyan Hybrid',
+                dateMember: '18-5-757'
+            },
+        ]
     }
 ]
-
 
 function checkIndex() {
     if (indexArr.includes(indexDefault)) {
@@ -156,72 +223,51 @@ function checkIndex() {
 }
 
 function addAnimation() {
-    backgroundElemnt[indexDefault].classList.add('animated-bg')
-    NameElement[indexDefault].classList.add('animated-bg', 'animated-bg-text')
-    DesElement[indexDefault].classList.add('animated-bg', 'animated-bg-text')
-    avatarElement[indexDefault].classList.add('animated-bg')
-    originElement[indexDefault].classList.add('animated-bg', 'animated-bg-text')
-    dateElement[indexDefault].classList.add('animated-bg', 'animated-bg-text')
-    // rotateElements[indexDefault].classList.add('animated-bg')
+    backgroundElemnts[indexDefault].classList.add('animated-bg')
+    NameElements[indexDefault].classList.add('animated-bg', 'animated-bg-text')
+    desElements[indexDefault].classList.add('animated-bg', 'animated-bg-text')
+    avatarElements[indexDefault].classList.add('animated-bg')
+    originElements[indexDefault].classList.add('animated-bg', 'animated-bg-text')
+    dateElements[indexDefault].classList.add('animated-bg', 'animated-bg-text')
 }
 
 function removeAnimation() {
-    backgroundElemnt[indexDefault].classList.remove('animated-bg')
-    NameElement[indexDefault].classList.remove('animated-bg', 'animated-bg-text')
-    DesElement[indexDefault].classList.remove('animated-bg', 'animated-bg-text')
-    avatarElement[indexDefault].classList.remove('animated-bg')
-    originElement[indexDefault].classList.remove('animated-bg', 'animated-bg-text')
-    dateElement[indexDefault].classList.remove('animated-bg', 'animated-bg-text')
-    // rotateElements[indexDefault].classList.remove('animated-bg')
-
-
+    backgroundElemnts[indexDefault].classList.remove('animated-bg')
+    NameElements[indexDefault].classList.remove('animated-bg', 'animated-bg-text')
+    desElements[indexDefault].classList.remove('animated-bg', 'animated-bg-text')
+    avatarElements[indexDefault].classList.remove('animated-bg')
+    originElements[indexDefault].classList.remove('animated-bg', 'animated-bg-text')
+    dateElements[indexDefault].classList.remove('animated-bg', 'animated-bg-text')    
 }
 
 function load() {
-    backgroundElemnt[indexDefault].innerHTML = `<img src="${carts[indexDefault].background}" alt="">`
-    NameElement[indexDefault].innerHTML = `${carts[indexDefault].Name}`
-    DesElement[indexDefault].innerHTML = `${carts[indexDefault].des}`
-    avatarElement[indexDefault].innerHTML = `<img src="${carts[indexDefault].avatar}" alt="">`
-    originElement[indexDefault].innerHTML = `Nguồn gốc: ${carts[indexDefault].origin}`
-    dateElement[indexDefault].innerHTML = `Ngày sinh: ${carts[indexDefault].date}`
-    // rotateElements[indexDefault].innerHTML = `<i class="icon-rotate fa-light fa-arrow-right-long"></i>`
-    // const htmls = carts[indexDefault].members.map((member, index) => {
-    //     return ` 
-    //         <div class="figure-member">
-    //             <figure class="avatar-member">
-    //                 <img src="${member.avatarMember}" alt="">
-    //             </figure>
-    //             <div class="body">
-    //                 <span class="member-name">${member.NameMember}</span>
-    //                 <span class="origin-member">${member.originMember}</span>
-    //                 <span class="date-member">${member.dateMember}</span>
-    //             </div>
-    //         </div>
-    //     `
-    // })
-    // rowElement[indexDefault].innerHTML = htmls.join('')
+    backgroundElemnts[indexDefault].innerHTML = `<img src="${cards[indexDefault].background}" alt="">`
+    NameElements[indexDefault].innerHTML = `${cards[indexDefault].Name}`
+    desElements[indexDefault].innerHTML = `${cards[indexDefault].des}`
+    avatarElements[indexDefault].innerHTML = `<img src="${cards[indexDefault].avatar}" alt="">`
+    originElements[indexDefault].innerHTML = `Nguồn gốc: ${cards[indexDefault].origin}`
+    dateElements[indexDefault].innerHTML = `Ngày sinh: ${cards[indexDefault].date}`
     loadMemeber()
     removeAnimation()
 }
 
 function loadMemeber() {
-    const htmls = carts[indexDefault].members.map((member, index) => {
+    const htmls = cards[indexDefault].members.map((member, index) => {
         return ` 
-            <div class="figure-member">
-                <figure class="avatar-member">
-                    <img src="${member.avatarMember}" alt="">
-                </figure>
-                <div class="body">
-                    <span class="member-name">Tên: ${member.NameMember}</span>
-                    <span class="origin-member">Nguồn gốc: ${member.originMember}</span>
-                    <span class="date-member">Ngày sinh: ${member.dateMember}</span>
-                </div>
+        <div class="figure-member" data-index = ${member.id_member}>
+            <figure class="avatar-member">
+                <img src="${member.avatarMember}" alt="">
+            </figure>
+            <div class="body">
+                <span class="member-name">Tên: ${member.NameMember}</span>
+                <span class="origin-member">Nguồn gốc: ${member.originMember}</span>
+                <span class="date-member">Ngày sinh: ${member.dateMember}</span>
             </div>
+        </div>
         `
     })
-    rowElement[indexDefault].innerHTML = htmls.join('')
+    rowElements[indexDefault].innerHTML = htmls.join('')
 }
-
 
 function run() {
     const currentCard = cardElements[indexDefault]
@@ -238,6 +284,20 @@ function setActive() {
     currentCard.classList.add('active')
 }
 
+function resetCard() {
+    const checkCardOn = cardOnElements[indexDefault]
+    const checkCardUnder = cardUnderElements[indexDefault]
+    const checkRotate = rotateElements[indexDefault]
+    const iconRotate = iconRotateElements[indexDefault]
+    
+    if ((checkCardOn.style.display === 'none')) {
+        checkCardOn.style.display = 'block'
+        checkCardUnder.style.display = 'none'
+        checkRotate.classList.remove('active')
+        iconRotate.style.transform = 'rotate(0)'
+    }
+}
+
 
 buttonLeftElement.addEventListener('click', () => {
     indexDefault--
@@ -247,6 +307,7 @@ buttonLeftElement.addEventListener('click', () => {
     }
     setActive()
     checkIndex()
+    resetCard()
 })
 
 buttonRightElement.addEventListener('click', () => {
@@ -258,12 +319,33 @@ buttonRightElement.addEventListener('click', () => {
     }
     setActive()
     checkIndex()
+    resetCard()
 })
 
+
+cardUnderElements.forEach(cardUnder => {
+    cardUnder.addEventListener('click', (e) => {
+        const figureElement = e.target.closest('.figure-member');
+
+        if (figureElement) {
+            const dataIndex = figureElement.dataset.index;
+            // Kiểm tra nếu dataIndex là một số hợp lệ
+            if (!isNaN(dataIndex)) {
+                // Chuyển đổi dataIndex thành số nguyên và đặt làm indexDefault
+                indexDefault = parseInt(dataIndex);
+                setActive();
+                checkIndex();
+                resetCard();
+            }
+        }
+    });
+});
+
+
 rotateElements.forEach((rotateElement, index) => {
-    const currentIconRotate = iconRotateElement[index]
-    const currentCardOn = cardOnElement[index]
-    const currentCardUnder = cardUnderElement[index]
+    const currentIconRotate = iconRotateElements[index]
+    const currentCardOn = cardOnElements[index]
+    const currentCardUnder = cardUnderElements[index]
     rotateElement.addEventListener('click', () => {
         rotateElement.classList.toggle('active')
         currentIconRotate.style.transform = rotateElement.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0)'
@@ -272,13 +354,14 @@ rotateElements.forEach((rotateElement, index) => {
     })
 })
 
-iconElement.forEach((icon, index) => {
-    const currentRow = rowElement[index]
-    icon.addEventListener('click', () => {
-        icon.classList.toggle('active')
+headerElements.forEach((header, index) => {
+    const currentRow = rowElements[index]
+    const currentIcon = iconElements[index]
+    header.addEventListener('click', () => {
+        currentIcon.classList.toggle('active')
         // currentRow.style.opacity = icon.classList.contains('active') ? '0' : '1'
-        currentRow.style.display = icon.classList.contains('active') ? 'none' : 'flex'
-        currentRow.style.animation = icon.classList.contains('active') ? `scrollUp .3s linear` : 'scrollDown .3s linear'
+        currentRow.style.display = currentIcon.classList.contains('active') ? 'none' : 'flex'
+        currentRow.style.animation = currentIcon.classList.contains('active') ? `scrollUp .3s linear` : 'scrollDown .3s linear'
 
     })
 })
