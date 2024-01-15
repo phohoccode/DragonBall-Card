@@ -1,21 +1,22 @@
 const buttonLeftElement = document.querySelector('.left')
 const buttonRightElement = document.querySelector('.right')
+const cardsElement = document.querySelector('.cards')
 const cardElements = document.querySelectorAll('.card')
 const cardOnElements = document.querySelectorAll('.card-on')
 const cardUnderElements = document.querySelectorAll('.card-under')
-const backgroundElemnts = document.querySelectorAll('.background')
-const NameElements = document.querySelectorAll('.name')
-const desElements = document.querySelectorAll('.des')
-const avatarElements = document.querySelectorAll('.avatar')
-const originElements = document.querySelectorAll('.origin')
-const dateElements = document.querySelectorAll('.date')
+const backgroundElemnts = document.querySelector('.background')
+const NameElements = document.querySelector('.name')
+const desElements = document.querySelector('.des')
+const avatarElements = document.querySelector('.avatar')
+const originElements = document.querySelector('.origin')
+const dateElements = document.querySelector('.date')
 const rotateElements = document.querySelectorAll('.rotate')
 const iconRotateElements = document.querySelectorAll('.icon-rotate')
 const rowElements = document.querySelectorAll('.row')
 const headerElements = document.querySelectorAll('header')
 const iconElements = document.querySelectorAll('.icon')
-
-
+const animateBgs = document.querySelectorAll('.animated-bg')
+const animateBgTexts = document.querySelectorAll('.animated-bg-text')
 
 let indexDefault = 0
 const lengthCart = cardElements.length
@@ -62,18 +63,21 @@ const cards = [
         date: '5-12-732',
         members: [
             {
+                id_member: 7,
                 avatarMember: 'assets/img/avatar/bulma.png',
                 NameMember: 'Bulma',
                 originMember: 'Trái Đất',
                 dateMember: '18-8-733'
             },
             {
+                id_member: 8,
                 avatarMember: 'assets/img/avatar/trunks.png',
                 NameMember: 'Trunks',
                 originMember: 'Saiyan Hybrid',
                 dateMember: '?-?-766'
             },
             {
+                id_member: 9,
                 avatarMember: 'assets/img/avatar/bulla.jpg',
                 NameMember: 'Bulla',
                 originMember: 'Saiyan Hybrid',
@@ -129,15 +133,17 @@ const cards = [
         des: 'Krillin là bạn thân từ thuở nhỏ của Goku và là một trong những chiến binh mạnh mẽ nhất của Trái Đất. Anh thường tham gia cùng Goku trong nhiều cuộc phiêu lưu và chiến đấu. Mặc dù không có sức mạnh Saiyan nhưng Krillin được biết đến với kỹ thuật chiến đấu tinh tế và sự gan dạ trong các tình huống khó khăn.',
         avatar: 'assets/img/avatar/krilin.jpg',
         origin: 'Trái Đất',
-        date: '15-8-757',
+        date: '20-5-736',
         members: [
             {
+                id_member: 10,
                 avatarMember: 'assets/img/avatar/android18.png',
                 NameMember: 'Android 18',
                 originMember: 'Trái Đất',
                 dateMember: '?-?-?'
             },
             {
+                id_member: 11,
                 avatarMember: 'assets/img/avatar/maron.jpeg',
                 NameMember: 'Maron',
                 originMember: 'Saiyan hybrid',
@@ -206,7 +212,182 @@ const cards = [
                 dateMember: '18-5-757'
             },
         ]
-    }
+    },
+    {
+        background: 'assets/img/background/bulma-bg.jpg',
+        Name: 'Bulma',
+        des: 'Bulma là con gái của Tiến sĩ Brief, một nhà khoa học nổi tiếng trong thế giới Dragon Ball. Cô chơi một vai trò quan trọng trong toàn bộ câu chuyện với đóng góp của mình trong việc phát minh các thiết bị quan trọng và hỗ trợ nhóm Z Fighters.',
+        avatar: 'assets/img/avatar/bulma.png',
+        origin: 'Trái Đất',
+        date: '18-8-733',
+        members: [
+            {
+                id_member: 1,
+                avatarMember: 'assets/img/avatar/Vegeta.jpg',
+                NameMember: 'Vegeta',
+                originMember: 'Saiyan',
+                dateMember: '5-12-732'
+            },
+            {
+                id_member: 8,
+                avatarMember: 'assets/img/avatar/trunks.png',
+                NameMember: 'Trunks',
+                originMember: 'Saiyan Hybrid',
+                dateMember: '?-?-766'
+            },
+            {
+                id_member: 9,
+                avatarMember: 'assets/img/avatar/bulla.jpg',
+                NameMember: 'Bulla',
+                originMember: 'Saiyan Hybrid',
+                dateMember: '?-?-?'
+            },
+        ]
+    },
+    {
+        background: 'assets/img/background/trunks-bg.jpg',
+        Name: 'Trunks',
+        des: 'Trunks là con trai của Bulma và Vegeta, là một nửa người và một nửa Saiyan. Gia đình của anh ta là một phần quan trọng của nhóm Z Fighters, nhóm những người mạnh mẽ chiến đấu để bảo vệ thế giới khỏi những mối đe dọa.',
+        avatar: 'assets/img/avatar/trunks.png',
+        origin: 'Saiyan Hybrid',
+        date: '?-?-767',
+        members: [
+            {
+                id_member: 1,
+                avatarMember: 'assets/img/avatar/Vegeta.jpg',
+                NameMember: 'Vegeta',
+                originMember: 'Saiyan',
+                dateMember: '5-12-732'
+            },
+            {
+                id_member: 7,
+                avatarMember: 'assets/img/avatar/bulma.png',
+                NameMember: 'Bulma',
+                originMember: 'Trái Đất',
+                dateMember: '18-8-733'
+            },
+            {
+                id_member: 8,
+                avatarMember: 'assets/img/avatar/trunks.png',
+                NameMember: 'Trunks',
+                originMember: 'Saiyan Hybrid',
+                dateMember: '?-?-766'
+            },
+        ]
+    },
+    {
+        background: 'assets/img/background/bulla-bg.jpg',
+        Name: 'Bulla',
+        des: 'Bulla là con gái của Bulma và Vegeta, là em gái của Trunks. Gia đình của Bulla là một phần quan trọng của nhóm Z Fighters, một nhóm những chiến binh mạnh mẽ chiến đấu để bảo vệ thế giới khỏi các mối đe dọa.',
+        avatar: 'assets/img/avatar/bulla.jpg',
+        origin: 'Saiyan Hybrid',
+        date: '?-?-?',
+        members: [
+            {
+                id_member: 1,
+                avatarMember: 'assets/img/avatar/Vegeta.jpg',
+                NameMember: 'Vegeta',
+                originMember: 'Saiyan',
+                dateMember: '5-12-732'
+            },
+            {
+                id_member: 7,
+                avatarMember: 'assets/img/avatar/bulma.png',
+                NameMember: 'Bulma',
+                originMember: 'Trái Đất',
+                dateMember: '18-8-733'
+            },
+            {
+                id_member: 3,
+                avatarMember: 'assets/img/avatar/gohan.jpg',
+                NameMember: 'Gohan',
+                originMember: 'Saiyan Hybrid',
+                dateMember: '18-5-757'
+            },
+        ]
+    },
+    {
+        background: 'assets/img/background/android18-bg.jpg',
+        Name: 'Android 18',
+        des: ' Android 18 là một trong những Android được tạo ra bởi Tiến sĩ Gero để hủy diệt Z Fighters. Tuy nhiên, sau khi bị hồi sinh và được đổi chánh, cô trở thành một người hùng và tham gia vào nhóm Z Fighters. Android 18 kết hôn với Krillin và có một con gái tên là Marron.',
+        avatar: 'assets/img/avatar/android18.png',
+        origin: 'Trái Đất',
+        date: '?-?-?',
+        members: [
+            {
+                id_member: 4,
+                avatarMember: 'assets/img/avatar/krilin.jpg',
+                NameMember: 'Krilin',
+                originMember: 'Trái Đất',
+                dateMember: '20-5-736'
+            },
+            {
+                id_member: 11,
+                avatarMember: 'assets/img/avatar/maron.jpeg',
+                NameMember: 'Maron',
+                originMember: 'Saiyan hybrid',
+                dateMember: '?-?-?'
+            }
+        ]
+    },
+    {
+        background: 'assets/img/background/maron-bg.jpg',
+        Name: 'Maron',
+        des: 'Maron là con gái của Nam và một nhân vật không phải là Android 18. Cô xuất hiện trong filler episode của loạt Dragon Ball Z và không xuất hiện trong manga. Lưu ý rằng có một sự nhầm lẫn khi Maron xuất hiện, vì tên của cô giống với tên của Android 18 trước khi được hồi sinh.',
+        avatar: 'assets/img/avatar/maron.jpeg',
+        origin: 'Saiyan hybrid',
+        date: '?-?-?',
+        members: [
+            {
+                id_member: 4,
+                avatarMember: 'assets/img/avatar/krilin.jpg',
+                NameMember: 'Krilin',
+                originMember: 'Trái Đất',
+                dateMember: '20-5-736'
+            },
+            {
+                id_member: 10,
+                avatarMember: 'assets/img/avatar/android18.png',
+                NameMember: 'Android 18',
+                originMember: 'Trái Đất',
+                dateMember: '?-?-?'
+            },
+        ]
+    },
+    {
+        background: 'assets/img/background/mr-satan-bg.jpg',
+        Name: 'Mr.Satan',
+        des: 'Mr. Satan là một nhân vật hài hước và có lẽ là nhân vật đa dạng nhất trong Dragon Ball. Trong khi ông thường tự đặt ra là anh hùng lớn lao, thực tế là ông thường chỉ là người làm phiền và thường được cứu giúp bởi các nhân vật mạnh mẽ như Goku và nhóm Z Fighters. Gia đình của ông thường xuất hiện trong các tình huống hài hước và ông thường được hiển thị như một người cha yêu thương và đầy lòng tự trọng đối với con gái và cháu gái.',
+        avatar: 'assets/img/avatar/mr-satan.png',
+        origin: 'Trái đất',
+        date: '?-?-?',
+        members: [
+            {
+                id_member: 13,
+                avatarMember: 'assets/img/avatar/videl.png',
+                NameMember: 'Videl',
+                originMember: 'Trái Đất',
+                dateMember: '?-?-?'
+            }
+        ]
+    },
+    {
+        background: 'assets/img/background/videl-bg.jpg',
+        Name: 'Videl',
+        des: 'Videl là con gái của Mr. Satan và là một nhân vật quan trọng trong Dragon Ball Z và Dragon Ball Super.',
+        avatar: 'assets/img/avatar/videl.png',
+        origin: 'Trái đất',
+        date: '?-?-?',
+        members: [
+            {
+                id_member: 12,
+                avatarMember: 'assets/img/avatar/mr-satan.png',
+                NameMember: 'Mr.Satan',
+                originMember: 'Trái Đất',
+                dateMember: '?-?-?'
+            }
+        ]
+    },
 ]
 
 function checkIndex() {
@@ -269,7 +450,7 @@ function loadMemeber() {
     rowElements[indexDefault].innerHTML = htmls.join('')
 }
 
-function run() {
+function runDefault() {
     const currentCard = cardElements[indexDefault]
     currentCard.classList.add('active')
     addAnimation()
@@ -366,4 +547,4 @@ headerElements.forEach((header, index) => {
     })
 })
 
-run()
+runDefault()

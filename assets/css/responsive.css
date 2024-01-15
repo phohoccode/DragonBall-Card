@@ -1,21 +1,33 @@
-@media  (max-width: 739px) {
-    body {
-        align-items: start;
-    }
-    
+@media (min-width: 240px ) and (max-width: 320px){
     .card {
-        max-width: 375px;
+        max-width: 250px;
+    }
+    button {
+        font-size: 16px;
+        padding: 16px 8px;
+    }
+    .left {
+        left: -10%;
+    }
+    .right {
+        right: -10%;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 739px) { 
+    .card {
+        max-width: 355px;
     }
 
     button {
-        margin-top: 24px;
-        top: 110%;
+        font-size: 16px;
+        padding: 16px 8px;
     }
     .left {
-        left: 0;
+        left: -5%;
     }
     .right {
-        right: 0;
+        right: -5%;
     }
     .more {
         opacity: 1;
