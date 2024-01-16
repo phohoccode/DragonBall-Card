@@ -16,7 +16,7 @@
 
 @media (min-width: 321px) and (max-width: 739px) { 
     .card {
-        max-width: 355px;
+        max-width: 340px;
     }
 
     button {

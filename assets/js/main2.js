@@ -4,6 +4,10 @@ const $$ = document.querySelectorAll.bind(document);
 const cardsElement = $('.cards')
 const leftButton = $('.left')
 const rightButton = $('.right')
+const search = $('.search')
+const inputSearch = $('input')
+const iconSearch = $('.search i')
+const showSearch = $('.show-search')
 
 
 const app = {
@@ -38,12 +42,13 @@ const app = {
                     NameMember: 'Gotent',
                     originMember: 'Saiyan',
                     dateMember: '?-?-767'
-                }
+                },
+
             ]
         },
         {
             background: 'assets/img/background/vegeta-bg.jpg',
-            Name: 'Vegata',
+            Name: 'Vegeta',
             des: 'Vegeta nổi tiếng với tính cách kiêu ngạo, tinh thần chiến đấu mạnh mẽ và lòng tự trọng cao. Anh cũng là một chiến binh mạnh mẽ, có khả năng tiến triển lên cấp độ siêu Saiyan và chiến đấu với sức mạnh đáng kinh ngạc. Mặc dù ban đầu là một nhân vật lạnh lùng và tự hào, nhưng qua thời gian, Vegeta phát triển và thể hiện sự trung hiếu và tình thương đối với gia đình.',
             avatar: 'assets/img/avatar/vegeta.jpg',
             origin: 'Saiyan',
@@ -375,6 +380,341 @@ const app = {
                 }
             ]
         },
+        {
+            background: 'assets/img/background/tien-shinhan-bg.jpg',
+            Name: 'Tiên Shinhan',
+            des: 'Tiên Shinhan, hay còn được gọi là Tienshinhan, là một chiến binh mạnh mẽ tham gia vào nhóm Z Fighters. Anh có kỹ thuật chiến đấu đặc sắc, bao gồm cả kỹ thuật Tri-Beam. Tiên Shinhan có mối quan hệ đặc biệt với Chiaotzu, người bạn đồng đội thân thiết của anh.',
+            avatar: 'assets/img/avatar/tien-shinhan.png',
+            origin: 'Trái Đất',
+            date: '?-?-?',
+            members: [
+                {
+                    id_member: 15,
+                    avatarMember: 'assets/img/avatar/chiaotzu.png',
+                    NameMember: 'Chiaotzu',
+                    originMember: 'Trái Đất',
+                    dateMember: '?-?-?'
+                }
+            ]
+        },
+        {
+            background: 'assets/img/background/chiaotzu-bg.jpg',
+            Name: 'Chiaotzu',
+            des: 'Chiaotzu là một nhân vật với khả năng siêu năng lực và là bạn thân thân của Tien Shinhan. Anh ta thường tham gia cùng Tien trong các cuộc chiến đấu và đôi khi hy sinh bản thân để bảo vệ nhóm.',
+            avatar: 'assets/img/avatar/chiaotzu.png',
+            origin: 'Trái Đất',
+            date: '?-?-?',
+            members: [
+                {
+                    id_member: 14,
+                    avatarMember: 'assets/img/avatar/tien-shinhan.png',
+                    NameMember: 'Tien Shinhan',
+                    originMember: 'Trái Đất',
+                    dateMember: '?-?-?'
+                }
+            ]
+        },
+        {
+            background: 'assets/img/background/yajirobe-bg.jpg',
+            Name: 'Yajirobe',
+            des: 'Yajirobe là một nhân vật lạ lẫm nhưng có đóng góp quan trọng trong cuộc chiến chống lại một số mối đe dọa trong Dragon Ball. Anh ta nổi tiếng với sức mạnh về vũ khí và đặc biệt là dao kiếm, và thường xuất hiện để giúp đỡ nhóm Z Fighters khi cần thiết.',
+            avatar: 'assets/img/avatar/yajirobe.png',
+            origin: 'Trái Đất',
+            date: '?-?-?',
+            members: []
+        },
+        {
+            background: 'assets/img/background/dende-bg.jpg',
+            Name: 'Dende',
+            des: 'Dende là một Namekian và đồng thời là Guardian của Trái Đất sau sự kiện Cell Saga. Anh có khả năng hồi phục và làm sống lại người chết. Dende thường hỗ trợ nhóm Z Fighters trong những cuộc chiến đấu quan trọng.',
+            avatar: 'assets/img/avatar/dende.png',
+            origin: 'Namekian',
+            date: '?-?-?',
+            members: []
+        },
+        {
+            background: 'assets/img/background/launch-bg.jpg',
+            Name: 'Launch',
+            des: 'Launch là một nhân vật có tính cách hai mặt, biến đổi giữa hai dạng khác nhau khi cô nổi giận hoặc sợ hãi. Mặt một của Launch là dễ thương và nhân từ, trong khi mặt khác là táo bạo và hỗn loạn. Cô xuất hiện trong Dragon Ball và Dragon Ball Z.',
+            avatar: 'assets/img/avatar/launch.jpg',
+            origin: 'Trái Đất',
+            date: '?-?-?',
+            members: []
+        },
+        {
+            background: 'assets/img/background/master-roshi-bg.png',
+            Name: 'Master Roshi',
+            des: 'Master Roshi, hay còn được biết đến với tên gọi Kame-Sennin, là một nhân vật lão luyện và mạnh mẽ. Ông là một trong những người thầy huấn luyện đầu tiên của Goku và Krillin. Master Roshi nổi tiếng với sức mạnh và kiến thức rộng lớn về kỹ thuật chiến đấu.',
+            avatar: 'assets/img/avatar/master-roshi.png',
+            origin: 'Trái Đất',
+            date: '?-?-?',
+            members: [
+                {
+                    id_member: 0,
+                    avatarMember: 'assets/img/avatar/goku.jpg',
+                    NameMember: 'Goku',
+                    originMember: 'Saiyan',
+                    dateMember: '18-4-737'
+                },
+                {
+                    id_member: 4,
+                    avatarMember: 'assets/img/avatar/krilin.jpg',
+                    NameMember: 'Krilin',
+                    originMember: 'Trái Đất',
+                    dateMember: '20-5-736'
+                },
+            ]
+        },
+        {
+            background: 'assets/img/background/taopaipai-bg.jpg',
+            Name: 'Tao Pai Pai',
+            des: 'Tao Pai Pai là một sát thủ chuyên nghiệp và là một trong những đối thủ nguy hiểm của Goku. Ông nổi tiếng với khả năng chiến đấu xuất sắc và sử dụng vũ khí độc đáo như đao giết và súng.',
+            avatar: 'assets/img/avatar/taopaipai.jpg',
+            origin: 'Unknown',
+            date: '?-?-?',
+            members: []
+        },
+        {
+            background: 'assets/img/background/yamcha-bg.jpg',
+            Name: 'Yamcha',
+            des: 'Yamcha là một trong những nhân vật đầu tiên xuất hiện trong Dragon Ball và là một chiến binh mạnh mẽ. Anh ta thường tham gia vào các cuộc phiêu lưu và chiến đấu bảo vệ Trái Đất, mặc dù đôi khi gặp phải thất bại.',
+            avatar: 'assets/img/avatar/yamcha.jpg',
+            origin: 'Trái Đất',
+            date: '?-?-?',
+            members: [
+                {
+                    id_member: 22,
+                    avatarMember: 'assets/img/avatar/puar.jpg',
+                    NameMember: 'Puar',
+                    originMember: 'Unknown',
+                    dateMember: '?-?-?'
+                }
+            ]
+        },
+        {
+            background: 'assets/img/background/puar-bg.png',
+            Name: 'Puar',
+            des: 'Puar là một hậu duệ của chủng tộc shapeshifting, có khả năng biến hình thành nhiều hình dạng khác nhau. Puar thường xuất hiện cùng với Yamcha và là một người bạn trung thành của nhóm Z Fighters.',
+            avatar: 'assets/img/avatar/puar.jpg',
+            origin: 'Unknown',
+            date: '?-?-?',
+            members: [
+                {
+                    id_member: 21,
+                    avatarMember: 'assets/img/avatar/yamcha.jpg',
+                    NameMember: 'Yamcha',
+                    originMember: 'Trái Đất',
+                    dateMember: '?-?-?'
+                }
+            ]
+        },
+        {
+            background: 'assets/img/background/android17-bg.jpg',
+            Name: 'Android 17',
+            des: 'Android 17 là một trong những Android được tạo ra bởi Tiến sĩ Gero để hủy diệt Z Fighters. Tuy nhiên, sau khi bị hồi sinh và được đổi chánh, anh ta trở thành một người hùng và tham gia vào nhóm Z Fighters. Android 17 có khả năng chiến đấu mạnh mẽ và là một chiến binh đáng gờm trong các trận đấu.',
+            avatar: 'assets/img/avatar/android17.png',
+            origin: 'Trái Đất',
+            date: '?-?-?',
+            members: [
+                {
+                    id_member: 10,
+                    avatarMember: 'assets/img/avatar/android18.png',
+                    NameMember: 'Android 18',
+                    originMember: 'Trái Đất',
+                    dateMember: '?-?-?'
+                },
+            ]
+        },
+        {
+            background: 'assets/img/background/oolong-bg.jpg',
+            Name: 'Oolong',
+            des: 'Oolong là một trong những nhân vật đầu tiên gặp Goku trong Dragon Ball. Anh ta là một con heo biết nói và có khả năng biến hình. Mặc dù thường tham gia các cuộc phiêu lưu, nhưng Oolong thường xuyên gặp phải những tình huống hài hước.',
+            avatar: 'assets/img/avatar/oolong.jpg',
+            origin: 'Unknown',
+            date: '?-?-?',
+            members: []
+        },
+        {
+            background: 'assets/img/background/cell-bg.png',
+            Name: 'Cell',
+            des: 'Cell là một sinh vật có nguồn gốc từ sự hấp thụ các nhân vật Android. Anh ta là một trong những đối thủ mạnh mẽ nhất mà nhóm Z Fighters phải đối mặt. Cell có khả năng hấp thụ các Android để tiến triển và trở thành một siêu sinh vật.',
+            avatar: 'assets/img/avatar/cell.jpg',
+            origin: 'Unknown',
+            date: '?-?-?',
+            members: []
+        },
+        {
+            background: 'assets/img/background/broly-bg.jpg',
+            Name: 'Broly',
+            des: 'Broly là một Saiyan với sức mạnh khủng khiếp, nổi tiếng trong loạt phim Dragon Ball Z và Dragon Ball Super. Anh ta có khả năng biến thành dạng Legendary Super Saiyan, nơi sức mạnh của anh ta tăng lên đáng kể.',
+            avatar: 'assets/img/avatar/broly.jpg',
+            origin: 'Saiyan',
+            date: '?-?-?',
+            members: []
+        },
+        {
+            background: 'assets/img/background/king-cold-bg.jpg ',
+            Name: 'Vua Cold',
+            des: 'Vua Cold là cha của Frieza và Cooler, là một trong những nhân vật mạnh mẽ và độc đáo trong vũ trụ Dragon Ball. Ông là người lãnh đạo của tộc Frieza và thường xuất hiện trong các tình huống chiến đấu nguy hiểm.',
+            avatar: 'assets/img/avatar/king-cold.png',
+            origin: 'Unknown',
+            date: '?-?-?',
+            members: [
+                {
+                    id_member: 33,
+                    avatarMember: 'assets/img/avatar/frieza.jpg',
+                    NameMember: 'Frieza',
+                    originMember: 'Unknown',
+                    dateMember: '?-?-?'
+                },
+                {
+                    id_member: 34,
+                    avatarMember: 'assets/img/avatar/cooler.png',
+                    NameMember: 'Cooler',
+                    originMember: 'Unknown',
+                    dateMember: '?-?-?'
+                }
+            ]
+        },
+        {
+            background: 'assets/img/background/tullece-bg.png',
+            Name: 'Tullece',
+            des: 'Tullece là một nhân vật xuất hiện trong bộ phim Dragon Ball Z: The Tree of Might. Anh ta là một Saiyan và sử dụng quả cầu Tree of Might để tăng cường sức mạnh của mình.',
+            avatar: 'assets/img/avatar/tullece.jpg',
+            origin: 'Saiyan',
+            date: '?-?-?',
+            members: []
+        },
+        {
+            background: 'assets/img/background/pilaf-bg.jpg',
+            Name: 'Pilaf',
+            des: 'Pilaf là một nhân vật có tính cách tinh quái xuất hiện trong Dragon Ball. Anh ta thường xuất hiện cùng với đồng bọn là Shu và Mai. Mặc dù không mạnh mẽ, nhóm Pilaf thường xuyên tham gia vào các kế hoạch để đánh bại nhóm Z Fighters.',
+            avatar: 'assets/img/avatar/pilaf.png',
+            origin: 'Unknown',
+            date: '?-?-?',
+            members: [
+                {
+                    id_member: 30,
+                    avatarMember: 'assets/img/avatar/shu.png',
+                    NameMember: 'Shu',
+                    originMember: 'Unknown',
+                    dateMember: '?-?-?'
+                },
+                {
+                    id_member: 31,
+                    avatarMember: 'assets/img/avatar/mai.jpg',
+                    NameMember: 'Mai',
+                    originMember: 'Unknown',
+                    dateMember: '?-?-?'
+                }
+            ]
+        },
+        {
+            background: 'assets/img/background/shu-bg.png',
+            Name: 'Shu',
+            des: 'Shu là một nhân vật xuất hiện trong Dragon Ball, thường xuất hiện cùng với nhóm Pilaf gồm Pilaf, Shu và Mai. Anh ta thường tham gia vào các kế hoạch của nhóm để đánh bại nhóm Z Fighters, nhưng thường xuyên thất bại do những tình huống hài hước.',
+            avatar: 'assets/img/avatar/shu.png',
+            origin: 'Unknown',
+            date: '?-?-?',
+            members: [
+                {
+                    id_member: 29,
+                    avatarMember: 'assets/img/avatar/pilaf.png',
+                    NameMember: 'Pilaf',
+                    originMember: 'Unknown',
+                    dateMember: '?-?-?'
+                },
+                {
+                    id_member: 31,
+                    avatarMember: 'assets/img/avatar/mai.png',
+                    NameMember: 'Mai',
+                    originMember: 'Unknown',
+                    dateMember: '?-?-?'
+                }
+            ]
+        },
+        {
+            background: 'assets/img/background/mai-bg.jpg',
+            Name: 'Mai',
+            des: 'Mai là một nhân vật xuất hiện trong Dragon Ball, thường xuất hiện cùng với nhóm Pilaf gồm Pilaf, Shu và Mai. Cô thường tham gia vào các kế hoạch của nhóm để đánh bại nhóm Z Fighters, nhưng thường xuyên thất bại do những tình huống hài hước.',
+            avatar: 'assets/img/avatar/mai.jpg',
+            origin: 'Unknown',
+            date: '?-?-?',
+            members: [
+                {
+                    id_member: 29,
+                    avatarMember: 'assets/img/avatar/pilaf.png',
+                    NameMember: 'Pilaf',
+                    originMember: 'Unknown',
+                    dateMember: '?-?-?'
+                },
+                {
+                    id_member: 30,
+                    avatarMember: 'assets/img/avatar/shu.png',
+                    NameMember: 'Shu',
+                    originMember: 'Unknown',
+                    dateMember: '?-?-?'
+                }
+            ]
+        },        
+        {
+            background: 'assets/img/background/korin-bg.jpg',
+            Name: 'Korin',
+            des: 'Korin là một nhân vật xuất hiện trong Dragon Ball, là một hổ trắng sống ở Tower Korin. Anh ta có thể cung cấp Senzu Beans, một loại thảo mộc có khả năng chữa lành và khôi phục sức mạnh người ăn.',
+            avatar: 'assets/img/avatar/korin.png',
+            origin: 'Trái Đất',
+            date: '?-?-?',
+            members: []
+        },
+        {
+            background: 'assets/img/background/frieza-bg.png',
+            Name: 'Frieza',
+            des: 'Frieza, còn được biết đến với tên gọi là Freeza, là một nhân vật phản diện chính trong Dragon Ball. Anh ta là một độc tài vũ trụ mạnh mẽ và tàn nhẫn, là một trong những kẻ thù đáng sợ nhất mà nhóm Z Fighters từng phải đối mặt. Frieza có năng lực biến hình và có nhiều biến thể mạnh mẽ.',
+            avatar: 'assets/img/avatar/frieza.jpg',
+            origin: 'Unknown',
+            date: '?-?-?',
+            members: [
+                {
+                    id_member: 27,
+                    avatarMember: 'assets/img/avatar/king-cold.png',
+                    NameMember: 'Vua Cold',
+                    originMember: 'Unknown',
+                    dateMember: '?-?-?'
+                },
+                {
+                    id_member: 34,
+                    avatarMember: 'assets/img/avatar/cooler.png',
+                    NameMember: 'Cooler',
+                    originMember: 'Unknown',
+                    dateMember: '?-?-?'
+                }
+            ]
+        },
+        {
+            background: 'assets/img/background/cooler-bg.jpg',
+            Name: 'Cooler',
+            des: 'Cooler là anh trai của Frieza và một nhân vật mạnh mẽ trong vũ trụ Dragon Ball. Tương tự như Frieza, Cooler là một nhân vật tàn nhẫn và quyết tâm chinh phục vũ trụ. Anh ta xuất hiện trong một số phiên bản và phần phụ truyện của loạt truyện.',
+            avatar: 'assets/img/avatar/cooler.png',
+            origin: 'Unknown',
+            date: '?-?-?',
+            members: [
+                {
+                    id_member: 27,
+                    avatarMember: 'assets/img/avatar/king-cold.png',
+                    NameMember: 'Vua Cold',
+                    originMember: 'Unknown',
+                    dateMember: '?-?-?'
+                },
+                {
+                    id_member: 33,
+                    avatarMember: 'assets/img/avatar/frieza.jpg',
+                    NameMember: 'Frieza',
+                    originMember: 'Unknown',
+                    dateMember: '?-?-?'
+                }
+            ]
+        }
+                           
     ],
 
     renderCard() {
@@ -393,14 +733,13 @@ const app = {
                                 <img src="${card.avatar}" alt="">
                             </figure>
                             <div class="body">
-                                <span class="origin">${card.origin}</span>
-                                <span class="date">${card.date}</span>
+                                <span class="origin">Nguồn gốc: ${card.origin}</span>
+                                <span class="date">Ngày sinh: ${card.date}</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="card-under">
-                    <div class="part">
                         <header>
                             <label for="">Family members</label>
                             <div class="icon">
@@ -422,7 +761,6 @@ const app = {
                                     </div>
                             `).join('')}
                         </div>
-                    </div>
                 </div>
                 <div class="rotate">
                     <i class="icon-rotate fa-light fa-arrow-right-long"></i>
@@ -431,7 +769,24 @@ const app = {
             `
         })
         cardsElement.innerHTML = htmls.join('')
-    },    
+    },
+
+    renderItem() {
+        const htmls = items.map((item, index) => {
+            return `
+                <li class="item">
+                    <figure>
+                        <img src="${item.avatar}" alt="" class="item-img">
+                    </figure>
+                    <div class="item-body">
+                        <span class="item-origin">${item.origin}</span>
+                        <span class="item-date">${item.date}</span>
+                    </div>
+              </li>      
+            `
+        })
+        showSearch.innerHTML = htmls.join('')
+    },
 
     handleEvent() {
         const _this = this
@@ -445,11 +800,61 @@ const app = {
             _this.renderCard()
         })
 
+        search.addEventListener('click', (e) => {
+            e.preventDefault()
+        })
+
+        iconSearch.addEventListener('click', () => {
+            search.classList.toggle('active')
+            showSearch.style.display = search.classList.contains('active') ? 'flex' : 'none'
+        })
+
+        cardsElement.addEventListener('click', () => {
+            search.classList.remove('active')
+            showSearch.style.display = 'none'
+
+        })
+
+        inputSearch.addEventListener('input', (e) => {
+            const valueSearch = e.target.value
+            if (valueSearch !== '') {
+                console.log('done')
+                showSearch.style.display = 'flex'
+            } else {
+                showSearch.style.display = 'none'
+            }
+            let items = _this.cards.filter(value => {
+                return value.Name.toLowerCase().includes(valueSearch)
+            })
+            console.log(items)
+            const htmls = items.map((item, index) => {
+                return `
+                    <li class="item" data-index=${item.members.id_member}>
+                        <div class="figure">
+                            <figure class="avatar">
+                                <img src="${item.avatar}" alt="">
+                            </figure>
+                            <div class="body">
+                                <span class="member-name">${item.Name}</span>
+                                <span class="origin">Nguồn gốc: ${item.origin}</span>
+                                <span class="date">Ngày sinh: ${item.date}</span>
+                            </div>
+                        </div>
+                  </li>      
+                `
+            })
+            showSearch.innerHTML = htmls.join('')
+        })
+
+        showSearch.addEventListener('click', (e) => {
+
+        })
+
         cardsElement.addEventListener('click', (e) => {
             const rotateNode = e.target.closest('.rotate')
             const figureNode = e.target.closest('.figure-member')
             const headerNode = e.target.closest('header')
-            
+
             if (rotateNode) {
                 const cardOn = rotateNode.closest('.card').querySelector('.card-on')
                 const cardUnder = rotateNode.closest('.card').querySelector('.card-under')
@@ -474,7 +879,7 @@ const app = {
             }
 
         })
-        
+
     },
 
     nextCard() {
