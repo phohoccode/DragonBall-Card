@@ -16,7 +16,7 @@
 
 @media (min-width: 321px) and (max-width: 739px) { 
     .card {
-        max-width: 340px;
+        max-width: 355px;
     }
 
     button {
@@ -29,7 +29,7 @@
     .right {
         right: -5%;
     }
-    .more {
-        opacity: 1;
+    .show-search {
+        width: 115%;
     }
 }
